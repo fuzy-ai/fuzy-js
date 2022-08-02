@@ -17,15 +17,35 @@ export REACT_APP_FUZY_AI_API_TOKEN=<your_api_token>
 ```
 
 ## Documentation
+API call made by this library
+
+https://fuzyai.stoplight.io/docs/fuzy-ai-public-api/4527c308f171b-update-a-v-3-event
+
+### sendEvent
+Parameters
+```js
+sendEvent(    
+    eventType, // required, name of event
+    {
+        userId, // required, userId internal to your application
+        accountId,
+        billingAccountId,
+        paymentProcessorCustomerId,
+        paymentProcessorSubscriptionId 
+    }, 
+    metadata = {},
+    tags = [],
+    eventId = "", // random UUID if unset, this must be unique for each event
+    productId = "",
+    sessionId = ""
+);
+```
 
 ```js
-import { sendAnalyticsEvent } from "fuzy-js";
+import { sendEvent } from "fuzy-js";
 
 const userId = getUser(); // this is internal to your application
 
-// without event ID (library will populate a random UUID)
-sendAnalyticsEvent(userId, "page_view/event_name");
-
-// with event ID (these should be unique for each sent event)
-sendAnalyticsEvent(userId, "page_view/event_name", "88873038-b924-478d-bbae-7ed3e0cb4a83");
+// with required parameters (eventType, userId)
+sendEvent("page_view/event_name", { userId });
 ```
