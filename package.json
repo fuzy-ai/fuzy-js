@@ -1,0 +1,22 @@
+{
+  "name": "fuzy-js",
+  "version": "1.0.0",
+  "description": "js library for Fuzy Api.",
+  "main": "fuzy-api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuzy-ai/fuzy-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fuzy-ai/fuzy-js/issues"
+  },
+  "homepage": "https://github.com/fuzy-ai/fuzy-js#readme",
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}
