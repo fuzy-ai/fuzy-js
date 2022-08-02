@@ -12,7 +12,7 @@ exports.sendEvent = async (
     if (!user.userId) {
         throw new Error("userId is required in Fuzy Event");
     }
-    if (eventType) {
+    if (!eventType) {
         throw new Error("eventType is required in Fuzy Event");
     }
 
