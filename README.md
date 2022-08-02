@@ -19,7 +19,7 @@ export REACT_APP_FUZY_AI_API_TOKEN=<your_api_token>
 ## Documentation
 
 ```js
-import { sendAnalyticsEvent } from "./fuzy-api";
+import { sendAnalyticsEvent } from "fuzy-js";
 
 const userId = getUser(); // this is internal to your application
 
