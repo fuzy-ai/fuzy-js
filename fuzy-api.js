@@ -1,13 +1,13 @@
 import { v4 as uuidv4 } from 'uuid';
 
 exports.sendEvent = async (
-    user,
     eventType,
+    user,
+    metadata = {},
+    tags = [],
     eventId = "",
     productId = "",
-    metadata = {},
     sessionId = "",
-    tags = [],
 ) => {
     if (!user.userId) {
         throw new Error("userId is required in Fuzy Event");
