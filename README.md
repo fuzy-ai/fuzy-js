@@ -8,8 +8,11 @@ https://github.com/fuzy-ai/sample-react-app/tree/fuzy-API-example
 
 Install library
 ```shell
-npm install https://github.com/fuzy-ai/fuzy-js
+npm install https://github.com/fuzy-ai/fuzy-js#beta-1.0.0
 ```
+NOTE: this installs a specific release of fuzy-js. This is the recommended way to install the fuzy-js library. 
+It's possible to install using `npm install https://github.com/fuzy-ai/fuzy-js`. This is not recommended because it 
+would pull the latest changes which may not be stable.
 
 Set API token for Fuzy
 ```shell
