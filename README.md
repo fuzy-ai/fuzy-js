@@ -2,7 +2,7 @@
 Javascript library for Fuzy API.
 
 ## Example
-https://github.com/fuzy-ai/sample-react-app/tree/fuzy-API-example
+https://github.com/fuzy-ai/sample-react-app
 
 ## Development
 
