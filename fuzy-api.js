@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-exports.sendEvent = async (
+export const sendEvent = async (
     eventType,
     user,
     metadata = {},
@@ -40,3 +40,5 @@ exports.sendEvent = async (
         }),
     });
 }
+
+exports.sendEvent = sendEvent;
