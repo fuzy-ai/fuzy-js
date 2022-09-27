@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
+import axios from "axios";
 
 export const sendEvent = async (
     eventType,
@@ -16,13 +17,7 @@ export const sendEvent = async (
         throw new Error("eventType is required in Fuzy Event");
     }
 
-    await fetch(`https://api.fuzy.ai/v3/event`, {
-        method: 'PUT',
-        headers: {
-            "Content-Type": "application/json",
-            "x-api-key": process.env.REACT_APP_FUZY_AI_API_TOKEN,
-        },
-        body: JSON.stringify({
+    await axios.put(`https://api.fuzy.ai/v3/event`, {
             eventType,
             timestamp: (new Date()).toISOString(),
             user: {
@@ -37,6 +32,13 @@ export const sendEvent = async (
             sessionId,
             tags,
             eventId: eventId.length ? eventId : uuidv4(),
-        }),
-    });
+        },
+        {
+            headers: {
+                "Content-Type":
+                    "application/json",
+                "x-api-key":
+                process.env.REACT_APP_FUZY_AI_API_TOKEN,
+            }
+        });
 }
