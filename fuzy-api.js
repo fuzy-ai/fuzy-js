@@ -40,5 +40,3 @@ export const sendEvent = async (
         }),
     });
 }
-
-exports.sendEvent = sendEvent;
