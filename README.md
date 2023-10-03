@@ -22,7 +22,7 @@ export REACT_APP_FUZY_AI_API_TOKEN=<your_api_token>
 ## Documentation
 API call made by this library
 
-https://fuzyai.stoplight.io/docs/fuzy-ai-public-api/4527c308f171b-update-a-v-3-event
+https://fuzy-ai.readme.io/docs/getting-started-with-our-sdk
 
 ### sendEvent
 Parameters
